@@ -22,21 +22,19 @@ It can:
 ## Directory Structure
 aavtaar_rag/
 ├── data/
-│   ├── raw_pdfs/
-│   ├── processed/
-│   └── index/chroma/
+│ ├── raw_pdfs/ # Input PDFs
+│ ├── processed/ # Extracted pages + chunks
+│ └── index/chroma/ # ChromaDB embeddings
 ├── scripts/
-│   ├── build_index.py
-│   ├── batch_index.py
-│   └── generate_hld_pdf.py
+│ ├── build_index.py
+│ ├── batch_index.py
+│ └── generate_hld_pdf.py
 ├── src/
-│   ├── ingest.py
-│   ├── chunk.py
-│   ├── embed_index.py
-│   ├── rag_pipeline.py
-│   └── highlight.py
-├── .gitignore
-├── README.md
+│ ├── ingest.py
+│ ├── chunk.py
+│ ├── embed_index.py
+│ ├── rag_pipeline.py
+│ └── highlight.py
 └── requirements.txt
 
 
