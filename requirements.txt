@@ -1,0 +1,13 @@
+numpy
+tqdm
+requests
+python-dotenv
+pillow
+pymupdf
+pytesseract
+faiss-cpu
+sentence-transformers
+rapidfuzz
+streamlit
+pypdf
+pdfplumber
