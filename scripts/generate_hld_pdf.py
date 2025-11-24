@@ -76,7 +76,7 @@ pdf = FPDF()
 pdf.set_auto_page_break(auto=True, margin=15)
 pdf.add_page()
 
-# ✅ Add UTF-8 compatible font (DejaVuSans.ttf must be in scripts/ folder)
+#  Add UTF-8 compatible font (DejaVuSans.ttf must be in scripts/ folder)
 font_path = os.path.join(os.path.dirname(__file__), "DejaVuSans.ttf")
 pdf.add_font('DejaVu', '', font_path, uni=True)
 pdf.set_font('DejaVu', '', 12)
@@ -89,4 +89,4 @@ for line in hld_text.split("\n"):
 output_path = os.path.join(os.path.dirname(__file__), "HLD_PDF_RAG_System.pdf")
 pdf.output(output_path)
 
-print(f"✅ PDF generated successfully: {output_path}")
+print(f" PDF generated successfully: {output_path}")
