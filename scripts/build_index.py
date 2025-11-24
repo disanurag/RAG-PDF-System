@@ -12,16 +12,16 @@ def main(pdf_path):
     out_dir = os.path.join("data", "processed", base)
     os.makedirs(out_dir, exist_ok=True)
 
-    print("📥 Extracting PDF...")
+    print(" Extracting PDF...")
     pages_jsonl = extract_pdf(pdf_path, out_dir)
 
-    print("✂️  Chunking text...")
+    print("  Chunking text...")
     chunks_jsonl = make_chunks(pages_jsonl, out_dir)
 
-    print("📦 Building index...")
+    print(" Building index...")
     build_index(chunks_jsonl, base)
 
-    print("✅ Build finished for", pdf_path)
+    print("Build finished for", pdf_path)
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
