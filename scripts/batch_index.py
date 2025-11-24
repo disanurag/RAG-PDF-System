@@ -16,7 +16,7 @@ for folder in os.listdir(PROCESSED_DIR):
     jsonl_path = os.path.join(folder_path, "pages.jsonl")
     
     if os.path.exists(jsonl_path):
-        print(f"📌 Indexing PDF: {folder}")
+        print(f" Indexing PDF: {folder}")
         build_index(jsonl_path, pdf_id=folder)
 
-print("✅ All PDFs indexed successfully into Chroma DB!")
+print(" All PDFs indexed successfully into Chroma DB!")
