@@ -13,4 +13,4 @@ for pdf in pdf_files:
     pdf_path = os.path.join(RAW_DIR, pdf)
     out_dir = os.path.join(PROCESSED_DIR, pdf.replace(".pdf", ""))
     pages_jsonl = extract_pdf(pdf_path, out_dir)
-    print(f"✅ Processed: {pdf}, JSONL saved at {pages_jsonl}")
+    print(f" Processed: {pdf}, JSONL saved at {pages_jsonl}")
