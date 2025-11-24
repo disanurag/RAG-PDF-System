@@ -8,7 +8,7 @@ import streamlit as st
 from src.rag_pipeline import answer_query
 
 st.set_page_config(page_title="PDF RAG QA System", layout="wide")
-st.title("📄 PDF RAG QA System")
+st.title(" PDF RAG QA System")
 
 proc_root = Path("data/processed")
 folders = [p for p in sorted(proc_root.iterdir()) if p.is_dir() and (p / "pages.jsonl").exists()]
@@ -32,10 +32,10 @@ if st.button("Get Answer") and query.strip():
             st.error(f"Error: {e}")
             raise
 
-    st.subheader("✅ Answer")
+    st.subheader(" Answer")
     st.write(answer)
 
-    st.subheader("📌 Top Evidence Snippets")
+    st.subheader(" Top Evidence Snippets")
     for i, ev in enumerate(evidences, 1):
         snippet = (ev.get("snippet") or "").strip()
         st.markdown(f"**{i}. Page {ev.get('page', '?')}:** {snippet[:300]}...")
@@ -44,7 +44,7 @@ if st.button("Get Answer") and query.strip():
         with open(annotated_pdf_path, "rb") as f:
             pdf_bytes = f.read()
         st.download_button(
-            label="⬇️ Download Highlighted PDF",
+            label=" Download Highlighted PDF",
             data=pdf_bytes,
             file_name=Path(annotated_pdf_path).name,
             mime="application/pdf"
